@@ -17,7 +17,7 @@ Galleria website
 
 ### Links
 
-- Repository URL: 
+- Repository URL: https://github.com/thusmiley/galleria-art.git
 - Live Site URL: 
 
 ### Built with
@@ -27,3 +27,4 @@ Galleria website
 - Tailwind
 - React (Nextjs)
 - React Router
+- MUI Material
