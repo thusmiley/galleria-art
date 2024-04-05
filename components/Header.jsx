@@ -27,7 +27,10 @@ const Header = () => {
         {pathname === "/" ? (
           <button
             className="text-darkGrey hover:text-black animation-effect font-bold text-[9px] tracking-[1.93px] md:text-[12px] md:tracking-[2.57px]"
-            onClick={() => goToCurrentSlide(currentSlide)}
+            onClick={() => {
+              setCurrentSlide(0);
+              goToCurrentSlide(currentSlide);
+            }}
           >
             START SLIDESHOW
           </button>

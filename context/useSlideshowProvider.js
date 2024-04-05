@@ -18,7 +18,6 @@ export function SlideshowProvider({ children }) {
   const totalSlides = data.length;
 
   const goToCurrentSlide = (index) => {
-    // console.log(index);
     router.push(`/${data[index].name.split(` `).join(`-`)}`);
   };
 

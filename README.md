@@ -28,3 +28,4 @@ Galleria website
 - React (Nextjs)
 - React Router
 - MUI Material
+- Gsap
