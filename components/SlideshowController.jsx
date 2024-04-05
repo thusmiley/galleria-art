@@ -13,7 +13,12 @@ const SlideshowController = ({ card }) => {
     totalSlides,
     currentPercent,
     setCurrentPercent,
+    goToCurrentSlide,
   } = useSlideshowContext();
+
+  useEffect(() => {
+    goToCurrentSlide(currentSlide);
+  }, [currentSlide]);
 
   return (
     <div className="xl:max-w-[1360px] mx-auto">

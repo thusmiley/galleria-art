@@ -18,7 +18,7 @@ Galleria website
 ### Links
 
 - Repository URL: https://github.com/thusmiley/galleria-art.git
-- Live Site URL: 
+- Live Site URL: https://galleria-art-delta.vercel.app/
 
 ### Built with
 

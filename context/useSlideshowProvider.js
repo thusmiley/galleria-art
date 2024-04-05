@@ -24,8 +24,6 @@ export function SlideshowProvider({ children }) {
 
   useEffect(() => {
     setCurrentPercent(((currentSlide + 1) / totalSlides) * 100);
-    // console.log(currentPercent);
-    goToCurrentSlide(currentSlide);
   }, [currentSlide]);
 
   return (
