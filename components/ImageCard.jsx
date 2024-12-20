@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useSlideshowContext } from "@/context/useSlideshowProvider";
 
@@ -15,11 +14,9 @@ const ImageCard = ({ index, item }) => {
         router.push(`/${item.name.split(` `).join(`-`)}`);
       }}
     >
-      <Image
+      <img
         src={item.images.thumbnail}
         alt={item.name}
-        width={327}
-        height={400}
         className="w-full h-auto object-cover object-center item-anim"
       />
       <div className="h-[170px] w-full linear-bg absolute bottom-0 z-10 item-anim" />

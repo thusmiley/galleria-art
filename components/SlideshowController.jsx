@@ -1,9 +1,6 @@
 "use client";
 import { useSlideshowContext } from "@/context/useSlideshowProvider";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import iconNext from "/public/assets/shared/icon-next-button.svg";
-import iconBack from "/public/assets/shared/icon-back-button.svg";
 import LinearProgress from "@mui/material/LinearProgress";
 
 const SlideshowController = ({ card }) => {
@@ -44,11 +41,9 @@ const SlideshowController = ({ card }) => {
         </div>
         <div className="flex items-center space-x-6 md:space-x-10">
           <button disabled={currentSlide === 0 ? true : false}>
-            <Image
-              src={iconBack}
+            <img
+              src="/assets/shared/icon-back-button.svg"
               alt="back"
-              width={26}
-              height={24}
               className={`${
                 currentSlide === 0
                   ? "opacity-50 cursor-default"
@@ -58,11 +53,9 @@ const SlideshowController = ({ card }) => {
             />
           </button>
           <button disabled={currentSlide === totalSlides - 1 ? true : false}>
-            <Image
-              src={iconNext}
-              alt="back"
-              width={26}
-              height={24}
+            <img
+              src="/assets/shared/icon-next-button.svg"
+              alt="next"
               className={`${
                 currentSlide === totalSlides - 1
                   ? "opacity-50 cursor-default"
