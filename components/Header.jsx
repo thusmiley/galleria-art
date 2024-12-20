@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/assets/shared/logo.svg";
 import { usePathname, useRouter } from "next/navigation";
 import { useSlideshowContext } from "@/context/useSlideshowProvider";
 
@@ -15,10 +13,8 @@ const Header = () => {
     <header className="max-w-[1360px] mx-auto">
       <div className="flex justify-between items-center p-6 md:px-10 md:py-7 xl:py-10">
         <Link href="/">
-          <Image
-            src={logo}
-            width={170}
-            height={48}
+          <img
+            src="/assets/shared/logo.svg"
             alt="galleria logo"
             className="w-[113px] h-auto object-contain object-center xl:w-[170px"
             priority

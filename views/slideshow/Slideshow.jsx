@@ -3,9 +3,7 @@ import { useSlideshowContext } from "@/context/useSlideshowProvider";
 import { useEffect, useState } from "react";
 import data from "../../utils/data.json";
 import SlideshowController from "@/components/SlideshowController";
-import Image from "next/image";
 import Link from "next/link";
-import viewIcon from "/public/assets/shared/icon-view-image.svg";
 
 const Slideshow = ({ params }) => {
   const [card, setCard] = useState();
@@ -43,11 +41,9 @@ const Slideshow = ({ params }) => {
               className="absolute animation-effect cursor-pointer top-4 left-4 bg-black/70 hover:bg-white/20 py-[14px] px-6 flex items-center justify-end text-white text-[10px] tracking-[2.14px] md:bottom-4 md:top-auto"
               onClick={() => setIsLighbox(true)}
             >
-              <Image
-                src={viewIcon}
+              <img
+                src="/assets/shared/icon-view-image.svg"
                 alt="view image"
-                width={12}
-                height={12}
                 className="w-3 h-auto object-contain object-center mr-[14px]"
               />
               VIEW IMAGE
@@ -62,11 +58,9 @@ const Slideshow = ({ params }) => {
                   media="(min-width: 769px)"
                   srcSet={card?.images.hero.large}
                 />
-                <Image
+                <img
                   src={card?.images.hero.small}
                   alt={card?.name}
-                  width={327}
-                  height={280}
                   className="w-full h-auto object-cover object-center md:max-w-[60vw] xl:w-[475px]"
                   priority
                 />
@@ -85,11 +79,9 @@ const Slideshow = ({ params }) => {
               </h2>
             </div>
             {isLoaded && (
-              <Image
+              <img
                 src={card?.artist.image}
                 alt={card?.artist.name || ""}
-                width={128}
-                height={128}
                 className="w-[64px] h-auto object-contain object-center ml-6 md:w-[128px] md:ml-0 md:float-right md:mr-[65px] xl:float-none xl:absolute xl:top-[496px] xl:left-auto xl:mr-auto xl:right-[50%]"
               />
             )}
@@ -126,11 +118,9 @@ const Slideshow = ({ params }) => {
             >
               CLOSE
             </button>
-            <Image
+            <img
               src={card?.images.gallery}
               alt={card?.name || ""}
-              width={573}
-              height={712}
               className="w-full h-auto object-cover object-center mx-auto max-w-[1360px] md:h-[80vh] md:w-auto"
             />
           </div>
